@@ -149,20 +149,20 @@ class FordFulkersonApp:
         def crear_matriz():
             try:
                 n = int(entry_nodos.get())
-                if n < 2:
-                    messagebox.showerror("Error", "Debe haber al menos 2 nodos")
+                if n < 8 or n > 16:
+                    messagebox.showerror("Error", "El número de nodos debe estar entre 8 y 16")
                     return
                 
                 self.num_nodos = n
                 self.mostrar_formulario_matriz(n)
             except ValueError:
                 messagebox.showerror("Error", "Ingrese un número válido")
-        
+
         def generar_matriz_aleatoria():
             try:
                 n = int(entry_nodos.get())
-                if n < 2:
-                    messagebox.showerror("Error", "Debe haber al menos 2 nodos")
+                if n < 8 or n > 16:
+                    messagebox.showerror("Error", "El número de nodos debe estar entre 8 y 16")
                     return
                 
                 self.num_nodos = n
